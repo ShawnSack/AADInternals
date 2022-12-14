@@ -329,10 +329,10 @@ function Join-LocalDeviceToAzureAD
         # Set tenant info
         $tenantInfo = @{
             "DisplayName"                    = $UserPrincipalName.split("@")[1].Split(".")[0]
-            "MdmEnrollmentUrl"               = ""
-            "MdmTermsOfUseUrl"               = ""
-            "MdmComplianceUrl"               = ""
-            "UserSettingSyncUrl"             = ""
+            "MdmEnrollmentUrl"               = "https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc"
+            "MdmTermsOfUseUrl"               = "https://portal.manage.microsoft.com/TermsofUse.aspx"
+            "MdmComplianceUrl"               = "https://portal.manage.microsoft.com/?portalAction=Compliance"
+            "UserSettingSyncUrl"             = "eyJVcmlzIjpbImh0dHBzOi8va2FpbGFuaS5vbmUubWljcm9zb2Z0LmNvbS8iLCJodHRwczovL2thaWxhbmkxLm9uZS5taWNyb3NvZnQuY29tLyJdfQ=="
             "DrsServiceVersion"              = "1.0"
             "DrsEndpoint"                    = "https://enterpriseregistration.windows.net/EnrollmentServer/DeviceEnrollmentWebService.svc"
             "DrsResourceId"                  = "urn:ms-drs:enterpriseregistration.windows.net"
